@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #ffffff;
+    overflow: hidden;
+}
+
+.Box-A1 {
+    position: relative;
+    width: 100%;
+    height: -100%;
+    overflow: hidden;
+}
+
+.Box-A2 {
+    display: flex;
+    animation: scroll 15s linear infinite;
+}
+
+.Box-A3 {
+    flex-shrink: 0;
+    height: 600px;
+    margin-right: 45px;
+}
+
+.Box-A3 img {
+    height: 100%;
+    object-fit: cover;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(-200%));
+        /* 滚动两组图片的宽度 */
+    }
+}
